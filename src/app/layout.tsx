@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/provider/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
-import { dark } from "@clerk/themes";
+import { shadesOfPurple } from "@clerk/themes";
 import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = localFont({
@@ -29,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider appearance={{
-      baseTheme: dark
+      baseTheme: [shadesOfPurple],
+      variables: { colorPrimary: 'blue' },
+      signIn: { baseTheme: shadesOfPurple },
     }}>
     <html lang="en" suppressHydrationWarning>
         <head />
