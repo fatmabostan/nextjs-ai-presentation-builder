@@ -11,7 +11,7 @@ const Layout = async ({ children }: Props) => {
         redirect('/sign-in');
     }
   return (
-    <div className='w-full min-h-screen'>
+    <div className='w-full min-h-screen overflow-x-clip'>
         {children}
     </div>
   )
